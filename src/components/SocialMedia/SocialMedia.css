@@ -1,0 +1,40 @@
+.sotial-media-main{
+    margin: 20px auto;
+}
+.card-social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #e5e8ed;
+    border-radius: 0.8rem;
+     color: #343f44;
+    padding: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s ease;
+    will-change: transform;
+    width: 180px;
+    height: 180px;
+    margin: 5px;
+}
+.card-col1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.card-col2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.card-social-media:hover{
+    box-shadow:  0 2px 5px rgb(3 27 78 / 20%)
+}
+#sotial-media-img{
+    width: 60px;
+    margin-bottom: 10px;
+}

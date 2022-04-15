@@ -1,0 +1,19 @@
+#go-to-login-btn{
+    width: 65px;
+    height: 22px;
+    border-radius: 20px;
+    color: #06A67E;
+    outline: 1px solid #06A67E;
+    background-color: white;
+    margin: 10px;
+    border: none;
+    font-weight: 600;
+}
+.go-to-login-content{
+    display: flex;
+    align-items: baseline;
+    margin: auto;
+}
+.go-to-login-content p{
+     color: #06A67E;
+}

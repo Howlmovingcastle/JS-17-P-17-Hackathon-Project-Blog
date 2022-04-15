@@ -1,0 +1,62 @@
+.signin-wrapper{
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 3px 10px grey;
+    background-image: url('./img/pink.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+.rightbar-wrapper{
+    width: 40%;
+    
+}
+.rightbar-wrapper img{
+    width: 100%;
+}
+.rightbar-content{
+    background-color: #06A67E;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 15px;
+}
+.rightbar-content h1{
+    color: white;
+}
+.rightbar-content h4{
+    color: white;
+    padding-bottom: 40px;
+}
+.signin-btn{
+    width: 25%;
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+    background-color: #06A67E;
+    margin: 19px auto;
+    border: none;
+    font-weight: 600;
+}
+.signin-btn:hover{
+    background-color: #06a67ecc;
+}
+.signin-btn:active {
+    transform: translateY(2px);
+  }
+#outlined-basic{
+    border: none;
+    outline: none;
+    width: 20rem;
+    height: 35px;
+    margin: 5px auto;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+}

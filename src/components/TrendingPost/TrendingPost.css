@@ -1,0 +1,109 @@
+
+.trending-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+    margin: 0 5%;
+}
+
+/* card */
+.css-bhp9pd-MuiPaper-root-MuiCard-root{
+    box-shadow: none !important;
+}
+.MuiCard-root{
+    max-width: 30%;
+    flex-basis: 30%;
+    width: 100%;
+    margin: 15px ;
+}
+.css-et1ao3-MuiTypography-root{
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+/* title */
+.css-pspavg-MuiTypography-root{
+    font-weight: 900 !important;
+    margin-top: 10px!important;
+    font-size: 12px !important;
+}
+.css-185gdzj-MuiCardHeader-root{
+    padding-bottom: 0 !important;
+}
+/* date */
+.css-r40f8v-MuiTypography-root{
+    font-size: 13px !important;
+    margin-top: 10px !important;
+}
+/* name */
+.css-1n9nhj7-MuiTypography-root{
+    font-size: 12px !important;
+    margin-left: 12px !important;
+}
+/* number */
+.css-rw3qn6-MuiTypography-root{
+    font-weight: 900 !important;
+    color: rgba(230, 230, 230, 1) !important;
+    font-size: 2rem !important;
+}
+.trending{
+    display: flex;
+    align-items: center;
+    margin: 0 5rem;
+}
+.trending-content{
+    margin-top: 10px;
+    margin-left: 15px; 
+}
+.trendig-medium{
+    font-weight: 700;
+    margin-left: 15px;
+    margin-top: 5px ;
+    text-transform: uppercase;
+    font-size: 12px;
+    
+}
+.css-46bh2p-MuiCardContent-root:last-child{
+    padding: 0;
+}
+/* icon */
+.css-i4bv87-MuiSvgIcon-root{
+    font-size: 2rem !important;
+}
+
+@media screen and (max-width: 945px){
+    .MuiCard-root{
+       margin: 20px;
+    }
+}
+@media screen and (max-width: 880px){
+    .css-rw3qn6-MuiTypography-root{
+        color: rgba(230, 230, 230, 1) !important;
+        font-size: 1.7rem !important;
+    }
+}
+@media screen and (max-width: 836px){
+    .css-1n9nhj7-MuiTypography-root{
+        font-size: 11px !important;
+    }
+}
+@media screen and (max-width: 785px){
+    .css-pspavg-MuiTypography-root{
+        font-size: 11px !important;
+    }
+    .css-rw3qn6-MuiTypography-root{
+        font-size: 1.5rem !important;
+    }
+    .css-1pqm26d-MuiAvatar{
+        width: 23px !important; 
+        height: 23px !important;
+        }
+}
+@media screen and (max-width: 725px){
+    .MuiCard-root{
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
