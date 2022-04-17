@@ -6,6 +6,7 @@ import AdminPage from "./pages/AdminPage";
 import Error404 from "./pages/Error404";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./containers/Footer/Footer";
+import PaymentForm from "./components/PaymentForm/PaymentForm";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -18,6 +19,11 @@ const MainRoutes = () => {
       link: "/authpage",
       element: <Auth />,
       id: 2,
+    },
+    {
+      link: "/payment",
+      element: <PaymentForm />,
+      id: 3,
     },
   ];
 
