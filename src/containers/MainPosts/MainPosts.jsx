@@ -10,7 +10,6 @@ const MainPosts = () => {
       <OnePost />
       <OnePost />
       <OnePost />
-      <OnePost />
     </div>
   );
 };
