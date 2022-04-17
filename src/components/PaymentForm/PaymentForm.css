@@ -1,6 +1,7 @@
 * {
   border: none;
   text-transform: capitalize;
+  box-sizing: border-box;
 }
 .form-payment {
   padding-top: 25%;
