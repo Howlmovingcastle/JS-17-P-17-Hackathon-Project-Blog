@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
+import Subscription from "../components/Subscription/Subscription";
 import MainPosts from "../containers/MainPosts/MainPosts";
 
 const HomePage = () => {
@@ -9,6 +10,7 @@ const HomePage = () => {
         <MainPosts />
         <Sidebar />
       </div>
+      <Subscription />
     </div>
   );
 };
