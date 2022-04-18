@@ -1,5 +1,9 @@
 import React from "react";
+import { Button, Icon } from "@mui/material";
 import { Link } from "react-router-dom";
+import { MoreOutlined } from "@mui/icons-material";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 
 import "./post.css";
 
@@ -15,7 +19,7 @@ const OnePost = () => {
         <div className="postCats">
           <span className="postCat">
             <Link className="link" to="/posts?cat=Music">
-              Music
+              Programming
             </Link>
           </span>
           <span className="postCat">
@@ -38,6 +42,21 @@ const OnePost = () => {
         fugiat, reprehenderit praesentium blanditiis quos cupiditate ratione
         atque, exercitationem quibusdam, reiciendis odio laboriosam?
       </p>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+          margin: "12px",
+          cursor: "pointer",
+        }}
+      >
+        <ThumbUpOutlinedIcon fontSize="large" />
+
+        <FavoriteBorderOutlinedIcon fontSize="large" />
+
+        <MoreOutlined fontSize="large" />
+      </div>
     </div>
   );
 };
