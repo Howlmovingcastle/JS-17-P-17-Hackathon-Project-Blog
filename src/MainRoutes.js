@@ -8,6 +8,7 @@ import Footer from "./containers/Footer/Footer";
 import SotialMedia from "./components/SocialMedia/SotialMedia";
 import SignIn from "./components/Sign In/SignIn";
 import SignUp from "./components/SignUp/SignUp";
+import Activate from "./components/Activate/Activate";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -25,6 +26,10 @@ const MainRoutes = () => {
       link: "/signup",
       element: <SignUp />,
       id: 2,
+    },
+    {
+      link: '/activate' ,
+      element: <Activate/>
     }
   ];
 

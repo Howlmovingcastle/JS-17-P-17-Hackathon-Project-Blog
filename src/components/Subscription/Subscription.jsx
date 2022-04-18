@@ -7,7 +7,7 @@ const Subscription = () => {
       <div className="mein container">
         <div className="card">
           <div className="circle">
-            <h2 style={{ fontSize: "50px" }}>Basic</h2>
+            <h2>Basic</h2>
             <h5>$2.99</h5>
           </div>
           <div className="content">
@@ -18,9 +18,9 @@ const Subscription = () => {
             <a id="first-b">add cart</a>
           </div>
         </div>
-        <div className="card">
+        <div className="card" data-aos-offset="3">
           <div className="circle">
-            <h2 style={{ fontSize: "50px" }}>Standart</h2>
+            <h2>Standart</h2>
             <h5>$5.99</h5>
           </div>
           <div className="content">
@@ -33,7 +33,7 @@ const Subscription = () => {
         </div>
         <div className="card">
           <div className="circle">
-            <h2 style={{ fontSize: "50px" }}>Premium</h2>
+            <h2>Premium</h2>
             <h5>$9.99</h5>
           </div>
           <div className="content">

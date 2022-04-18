@@ -9,6 +9,9 @@
     background-repeat: no-repeat;
     border-radius: 15px;
 }
+.signin-up{
+    color: #06A67E;
+}
 .rightbar-wrapper{
     width: 40%;
     
@@ -59,4 +62,213 @@
     text-align: center;
     border-radius: 10px;
     font-size: 18px;
+}
+#logo-signup{
+width: 130px;
+}
+@media screen and (min-width: 1440px) {
+    .signin-up{
+        font-size: 40px;
+    }
+    .rightbar-content h4{
+        font-size: 18px;
+    }
+    .rightbar-content h1{
+        font-size: 30px;
+    }
+    #outlined-basic {
+        width: 28rem;
+        height: 47px;
+        font-size: 21px;
+    } 
+    .signin-btn{
+        font-size: 20px;
+    }
+    .go-to-login-content p {
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 1420px) {
+    .signin-up{
+        font-size: 38px;
+    }
+    .rightbar-content h4{
+        font-size: 17px;
+    }
+    .rightbar-content h1{
+        font-size: 28px;
+    }
+    #outlined-basic {
+        width: 25rem;
+        height: 45px;
+        font-size: 20px;
+    } 
+    .signin-btn{
+        font-size: 20px;
+    }
+    .go-to-login-content p {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 1305px) {
+    .signin-up{
+        font-size: 36px;
+    }
+    .rightbar-content h4{
+        font-size: 17px;
+    }
+    .rightbar-content h1{
+        font-size: 28px;
+    }
+    #outlined-basic {
+        width: 23rem;
+        height: 45px;
+        font-size: 19px;
+    } 
+    .signin-btn{
+        font-size: 19px;
+    }
+}
+@media screen and (max-width: 1245px) {
+    #outlined-basic {
+        width: 21rem;
+        height: 43px;
+    }
+    .rightbar-content h4 {
+        font-size: 16px;
+    }
+    #outlined-basic {
+        width: 19rem;
+        height: 42px;
+    }
+}
+@media screen and (max-width: 1155px) {
+    #outlined-basic {
+        width: 20rem;
+        height: 42px;
+    }
+    .rightbar-content h4 {
+        font-size: 16px;
+    }
+    #outlined-basic {
+        width: 19rem;
+        height: 42px;
+    }
+    .signin-btn {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 1045px) {
+    #outlined-basic {
+        width: 17rem;
+        height: 40px;
+        font-size: 14px;
+    }
+    .signin-up{
+        font-size: 30px;
+    }
+    .signin-btn{
+        font-size: 16px;
+        width: 20%;
+        height: 30px;
+        margin: 13px auto;
+    }
+    .rightbar-content h1 {
+        font-size: 26px;
+    }
+    .rightbar-content h4 {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 960px) {
+    #outlined-basic {
+        width: 15rem;
+        height: 35px;
+    }
+}
+@media screen and (max-width: 865px) {
+    #outlined-basic {
+        width: 13rem;
+        height: 31px;
+    }
+    .signin-up {
+        font-size: 28px;
+    }
+    .signin-btn {
+        font-size: 14px;
+        width: 18%;
+        height: 28px;
+        margin: 10px auto;
+    }
+    .rightbar-content h1 {
+        font-size: 24px;
+    }
+    .rightbar-content h4 {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 800px) {
+    #logo-signup{
+        width: 110px;
+        }
+}
+@media screen and (max-width: 675px) {
+    .rightbar-content h4 {
+        font-size: 11px;
+    }
+    .rightbar-content h1 {
+        font-size: 22px;
+    }
+    .signin-up {
+        font-size: 26px;
+    }
+    .signin-btn {
+        font-size: 13px;
+        width: 19%;
+        height: 23px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .rightbar-wrapper {
+        display: none;
+    }
+}
+@media screen and (max-width: 575px) {
+    .signin-btn{
+        width: 25%;
+        height: 28px;
+    }
+}
+@media screen and (max-width: 555px) {
+    .signin-wrapper{
+        background-position: inherit;
+    }
+}
+
+@media screen and (max-width:380px) {
+    #outlined-basic {
+        width: 11rem;
+        height: 28px;
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 385px){
+    .signin-btn {
+        width: 29%;
+        height: 24px;
+    }
+}
+@media screen and (max-width: 355px) {
+    .signin-btn {
+        width: 60px;
+        height: 24px;
+    }
+    .signin-up {
+        font-size: 23px;
+    }
+}
+@media screen and (max-width: 322px) {
+    #go-to-login-btn {
+        margin: 4px;
+    }
 }

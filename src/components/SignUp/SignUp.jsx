@@ -1,11 +1,24 @@
 import { Button } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./SignUp.css";
 import logo from "../Sign In/img/icon.svg";
+import { useAuthContext } from "../../contexts/authContext";
 const SignUp = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+
+  const { signUp } = useAuthContext();
+  // console.log(email, password);
   const location = useLocation();
   const navigate = useNavigate();
+
+  function handleRegister(email, password, confirmPassword, name, lastName) {
+    signUp({ email, password, confirmPassword, name, lastName }, navigate);
+  }
   return (
     <div>
       <div className="signin-wrapper">
@@ -31,31 +44,43 @@ const SignUp = () => {
             textAlign: "center",
           }}
         >
-          <h1 style={{ color: "#06A67E" }}>Create account</h1>
+          <h1 className="signin-up">Create account</h1>
           <input
             id="outlined-basic"
             placeholder="Email"
-            //   onChange={(e) => setEmail(e.target.value)}
-            //   value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
           />
           <input
             id="outlined-basic"
             placeholder="Password"
-            //   onChange={(e) => setPassword(e.target.value)}
-            //   value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
           />
           <input
             id="outlined-basic"
             placeholder="Confirm password"
-            //   onChange={(e) => setPassword(e.target.value)}
-            //   value={password}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            value={confirmPassword}
           />
-
+          <input
+            id="outlined-basic"
+            placeholder="Name"
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+          />
+          <input
+            id="outlined-basic"
+            placeholder="Last name"
+            onChange={(e) => setLastName(e.target.value)}
+            value={lastName}
+          />
           <button
             variant="contained"
             className="signin-btn"
-
-            //   onClick={() => handleLogin(email, password, navigate)}
+            onClick={() =>
+              handleRegister(email, password, confirmPassword, name, lastName)
+            }
           >
             Sign Up
           </button>

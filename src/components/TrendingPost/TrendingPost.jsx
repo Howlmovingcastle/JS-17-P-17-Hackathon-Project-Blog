@@ -14,7 +14,7 @@ const TrendingPost = () => {
   return (
     <div className="container">
       <div data-aos="fade-up" data-aos-duration="1000" className="trending">
-        <TrendingUpIcon sx={{ width: 25, height: 25 }} />
+        <TrendingUpIcon id='trending-icon' />
         <h2 className="trendig-medium">Trending on Medium</h2>
       </div>
       <div className="trending-wrapper">

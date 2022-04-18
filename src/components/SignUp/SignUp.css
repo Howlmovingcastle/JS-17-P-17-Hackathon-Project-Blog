@@ -17,3 +17,92 @@
 .go-to-login-content p{
      color: #06A67E;
 }
+
+@media screen and (min-width: 1440px) {
+   
+    #go-to-login-btn {
+        width: 70px;
+        height: 27px;
+        font-size: 16px;
+    }
+}
+@media screen and (min-width: 1420px) {
+   
+    #go-to-login-btn {
+        width: 70px;
+        height: 27px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1305px) {
+     
+   
+    .go-to-login-content p {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 1245px) {
+    #go-to-login-btn {
+        width: 65px;
+        height: 25px;
+        font-size: 15px;
+    }
+    .go-to-login-content p {
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 1045px) {
+    .go-to-login-content p {
+        font-size: 15px;
+    }#go-to-login-btn {
+        width: 58px;
+        height: 20px;
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 865px) {
+    .go-to-login-content p {
+        font-size: 13px;
+    }
+    #go-to-login-btn {
+        width: 52px;
+        height: 18px;
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 417px) {
+    .go-to-login-content p {
+        font-size: 12px;
+    }
+    #go-to-login-btn {
+        width: 48px;
+        height: 15px;
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 400px) {
+    #go-to-login-btn{
+        margin: 5px;
+    }
+}
+@media screen and (max-width: 390px) {
+    .go-to-login-content p {
+        font-size: 11px;
+    }
+    #go-to-login-btn {
+        width: 50px;
+        height: 17px;
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 368px) {
+    #go-to-login-btn {
+        width: 48px;
+        height: 15px;
+        font-size: 10px;
+    }
+    .go-to-login-content p {
+        font-size: 10px;
+    }
+}

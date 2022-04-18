@@ -1,17 +1,28 @@
 import { Button } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./SignIn.css";
 import logo from "./img/icon.svg";
+import { useAuthContext } from "../../contexts/authContext";
 const SignIn = () => {
   const location = useLocation();
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  
+  const { signIn } = useAuthContext();
+  // console.log(email, password)
+
+  function handleLogin(email, password) {
+    signIn(email, password, navigate);
+  }
+
   return (
     <div className="mine">
       <div className="signin-wrapper">
         <div className="rightbar-wrapper">
           <div className="rightbar-content">
-            <img src={logo} alt="logo" style={{ width: "130px" }} />
+            <img src={logo} alt="logo" id="logo-signup" />
             <h1>Welcome back!</h1>
             <h4>
               Don't let the memories fade. You can store thousands of posts,
@@ -30,33 +41,27 @@ const SignIn = () => {
             textAlign: "center",
           }}
         >
-          <h1 style={{ color: "#06A67E" }}>Sign In</h1>
+          <h1 className="signin-up">Sign In</h1>
           <input
             id="outlined-basic"
             placeholder="Email"
-            //   onChange={(e) => setEmail(e.target.value)}
-            //   value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
           />
           <input
             id="outlined-basic"
             placeholder="Password"
-            //   onChange={(e) => setPassword(e.target.value)}
-            //   value={password}
-          />
-          <input
-            id="outlined-basic"
-            placeholder="Confirm password"
-            //   onChange={(e) => setPassword(e.target.value)}
-            //   value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              value={password}
           />
 
           <button
             variant="contained"
             className="signin-btn"
 
-            //   onClick={() => handleLogin(email, password, navigate)}
+              onClick={() => handleLogin(email, password )}
           >
-            Log In
+            Log in
           </button>
           {/* эти стили в signup.css */}
           {location.pathname == "/signin" ? (

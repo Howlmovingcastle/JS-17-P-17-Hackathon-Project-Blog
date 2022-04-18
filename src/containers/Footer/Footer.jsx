@@ -41,6 +41,7 @@ const Footer = () => {
               <a className="footer-link">Форум разработчов</a>
             </li>
           </ul>
+          
         </section>
         <div className="div-1">
           <div className="div-b"></div>
@@ -63,16 +64,16 @@ const Footer = () => {
           </ul>
           <div> </div>
           <div className="select-wrapper">
-            <FormControl fullWidth>
+            <FormControl id='select-language' fullWidth>
               <InputLabel id="demo-simple-select-label">Language</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 label="Language"
               >
-                <MenuItem value={10}>Русский</MenuItem>
-                <MenuItem value={20}>Engish</MenuItem>
-                <MenuItem value={30}>Spanish (Spain) - Español</MenuItem>
+                <MenuItem id='language-inner' value={10}>Русский</MenuItem>
+                <MenuItem id='language-inner' value={20}>English</MenuItem>
+                <MenuItem  id='language-inner' value={30}>Spanish (Spain) - Español</MenuItem>
               </Select>
             </FormControl>
           </div>
