@@ -1,13 +1,16 @@
 import React from "react";
-import PostsContextProvider from "./contexts/PostsContext";
+import CartContextProvider from "./contexts/cartContext";
+import FavoriteContextProvider from "./contexts/favoriteContext";
 
 import MainRoutes from "./MainRoutes";
 
 const App = () => {
   return (
-    <PostsContextProvider>
-      <MainRoutes />
-    </PostsContextProvider>
+    <CartContextProvider>
+      <FavoriteContextProvider>
+        <MainRoutes />
+      </FavoriteContextProvider>
+    </CartContextProvider>
   );
 };
 

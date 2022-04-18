@@ -1,5 +1,4 @@
 import React from "react";
-import { Button, Icon } from "@mui/material";
 import { Link } from "react-router-dom";
 import { MoreOutlined } from "@mui/icons-material";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
@@ -53,7 +52,13 @@ const OnePost = () => {
       >
         <ThumbUpOutlinedIcon fontSize="large" />
 
-        <FavoriteBorderOutlinedIcon fontSize="large" />
+        <FavoriteBorderOutlinedIcon
+          fontSize="large"
+          // onClick={() => {
+          //   addProductToFavorites(item);
+          //   setCheckItem1(checkItemInFavorites(item.id));
+          // }}
+        />
 
         <MoreOutlined fontSize="large" />
       </div>

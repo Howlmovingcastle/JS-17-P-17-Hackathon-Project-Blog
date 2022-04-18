@@ -8,6 +8,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./containers/Footer/Footer";
 import PaymentForm from "./components/PaymentForm/PaymentForm";
 import Single from "./pages/singlePage/Single";
+import Favorites from "./components/Favorites/Favorites";
+import Cart from "./components/Cart/Cart";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -30,6 +32,16 @@ const MainRoutes = () => {
       link: "/postdetails",
       element: <Single />,
       id: 4,
+    },
+    {
+      link: "/cart",
+      element: <Cart />,
+      id: 6,
+    },
+    {
+      link: "/favorites",
+      element: <Favorites />,
+      id: 7,
     },
   ];
 

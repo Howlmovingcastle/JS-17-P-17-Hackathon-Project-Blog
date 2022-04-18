@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
-import { cartContext } from "../../../contexts/cartContext";
 import { List, Button } from "antd";
 import { Link } from "react-router-dom";
+import { cartContext } from "../../contexts/cartContext";
 
 const Cart = () => {
   const { getCart, cart, deleteFromCart } = useContext(cartContext);

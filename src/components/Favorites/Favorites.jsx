@@ -1,148 +1,88 @@
-import React, { useReducer } from "react";
-import { calcSubPrice, calcTotalPrice } from "../helpers/calcPrice";
-import { CASE_GET_CART } from "../helpers/cases";
+import React, { useContext, useEffect } from "react";
+import { favoriteContext } from "../../contexts/favoriteContext";
 
-export const cartContext = React.createContext();
+import { List, Button } from "antd";
 
-const INIT_STATE = {
-  cart: {},
-  cartLength: 0,
-};
+import "./Favorites.css";
 
-const reducer = (state = INIT_STATE, action) => {
-  switch (action.type) {
-    case CASE_GET_CART:
-      return {
-        ...state,
-        cart: action.payload,
-        cartLength: action.payload.products.length,
-      };
+const Favorites = () => {
+  const { getFavorites, favorite, deleteFromFavorites } =
+    useContext(favoriteContext);
 
-    default:
-      return state;
-  }
-};
-
-const CartContextProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, INIT_STATE);
-
-  function getCart() {
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    if (!cart) {
-      cart = {
-        products: [],
-        totalPrice: 0,
-      };
-      localStorage.setItem("cart", JSON.stringify(cart));
-    }
-
-    cart.totalPrice = calcTotalPrice(cart.products);
-
-    dispatch({
-      type: CASE_GET_CART,
-      payload: cart,
-    });
-  }
-
-  function addProductToCart(product) {
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    if (!cart) {
-      cart = {
-        products: [],
-        totalPrice: 0,
-      };
-    }
-
-    let newProduct = {
-      item: product,
-      count: 1,
-      subPrice: product.price,
-    };
-
-    let isProductInCart = cart.products.some(
-      (item) => item.item.id == newProduct.item.id
-    );
-    if (isProductInCart) {
-      cart.products = cart.products.filter(
-        (item) => item.item.id != newProduct.item.id
-      );
-    } else {
-      cart.products.push(newProduct);
-    }
-
-    cart.totalPrice = calcTotalPrice(cart.products);
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }
-
-  function checkItemInCart(id) {
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    if (!cart) {
-      cart = {
-        products: [],
-        totalPrice: 0,
-      };
-    }
-    let isProductInCart = cart.products.some((item) => item.item.id == id);
-    return isProductInCart;
-  }
-
-  function deleteFromCart(id) {
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    if (!cart) {
-      cart = {
-        products: [],
-        totalPrice: 0,
-      };
-    }
-
-    cart.products = cart.products.filter((item) => item.item.id != id);
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    getCart();
-  }
-
-  function changeProductCount(count, id) {
-    if (count <= 0) {
-      count = 1;
-    }
-
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    if (!cart) {
-      cart = {
-        products: [],
-        totalPrice: 0,
-      };
-      localStorage.setItem("cart", JSON.stringify(cart));
-    }
-    cart.products = cart.products.map((item) => {
-      if (item.item.id == id) {
-        item.count = count;
-        item.subPrice = calcSubPrice(item);
-      }
-      return item;
-    });
-    cart.totalPrice = calcTotalPrice(cart.products);
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    getCart();
-  }
+  useEffect(() => {
+    getFavorites();
+  }, []);
 
   return (
-    <cartContext.Provider
-      value={{
-        cart: state.cart,
-        cartLength: state.cartLength,
-        getCart,
-        addProductToCart,
-        checkItemInCart,
-        deleteFromCart,
-        changeProductCount,
-      }}
-    >
-      {children}
-    </cartContext.Provider>
+    <div className="animated-background">
+      <div className="container">
+        <List
+          itemLayout="vertical"
+          dataSource={favorite.products}
+          renderItem={(item) => (
+            <List.Item
+            // extra={<img src={item.item.image1} alt="image1" width={272} />}
+            >
+              <List.Item.Meta
+                title={
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                    }}
+                  >
+                    <img
+                      src={item.item.image1}
+                      style={{ width: "272px" }}
+                      alt=""
+                    />
+                  </div>
+                }
+                description={
+                  <>
+                    <div>
+                      <h3>{item.item.brand}</h3>
+                      <h4>{item.item.model}</h4>
+                    </div>
+                    <div
+                      style={{
+                        color: "#030303",
+                        width: "60vw",
+                        marginTop: "35px",
+                      }}
+                    >
+                      {item.item.description}
+                    </div>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        width: "40%",
+                        marginTop: "20px",
+                      }}
+                    ></div>
+                    <Button onClick={() => deleteFromFavorites(item.item.id)}>
+                      Remove from favorites
+                    </Button>
+
+                    <Button
+                      style={{
+                        margin: "35px",
+                      }}
+                    >
+                      Read more
+                    </Button>
+                  </>
+                }
+              />
+            </List.Item>
+          )}
+        />
+      </div>
+    </div>
   );
 };
 
-export default CartContextProvider;
+export default Favorites;
