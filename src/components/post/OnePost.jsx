@@ -6,41 +6,27 @@ import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 
 import "./post.css";
 
-const OnePost = () => {
+const OnePost = ({ item }) => {
   return (
     <div className="post">
-      <img
-        className="postImg"
-        src="https://media.graphcms.com/jrNuMFc5TPWr6huhDtId"
-        alt="post img"
-      />
+      <img className="postImg" src={item.img} alt="post img" />
       <div className="postInfo">
         <div className="postCats">
           <span className="postCat">
             <Link className="link" to="/posts?cat=Music">
-              Programming
-            </Link>
-          </span>
-          <span className="postCat">
-            <Link className="link" to="/posts?cat=Music">
-              LifeStyle
+              {item.category}
             </Link>
           </span>
         </div>
         <span className="postTitle">
           <Link to="/post/abc" className="link">
-            Lorem ipsum dolor sit amet
+            {item.title}
           </Link>
         </span>
         <hr />
         <span className="postDate">1 hour ago</span>
       </div>
-      <p className="postDesc">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-        officia architecto deserunt deleniti? Labore ipsum aspernatur magnam
-        fugiat, reprehenderit praesentium blanditiis quos cupiditate ratione
-        atque, exercitationem quibusdam, reiciendis odio laboriosam?
-      </p>
+      <p className="postDesc">{item.descr}</p>
       <div
         style={{
           display: "flex",

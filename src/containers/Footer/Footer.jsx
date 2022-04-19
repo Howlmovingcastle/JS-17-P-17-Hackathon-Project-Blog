@@ -6,12 +6,6 @@ const Footer = () => {
   return (
     <footer class="footer">
       <div class="container-footer">
-        <div className="logo__foter">
-          <img
-            src="https://logos.textgiraffe.com/logos/logo-name/Layla-designstyle-pastel-m.png"
-            alt="logo"
-          />
-        </div>
         <div class="row">
           <div class="footer-col">
             <h4>company</h4>
@@ -87,7 +81,7 @@ const Footer = () => {
               </a>
               <div className="footer-telegram-icon">
                 <br></br>
-                <p>Have a chat with our manager!</p>
+                <p>Get In Touch with Admin:</p>
                 <a href="https://t.me/laylacommerce_bot">
                   <img
                     style={{ width: "30px", height: "30px" }}

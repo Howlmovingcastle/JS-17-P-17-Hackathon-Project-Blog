@@ -45,7 +45,7 @@ const SinglePost = () => {
       <div className="singlePostWrapper">
         <img
           className="singlePostImg"
-          src="https://media.graphcms.com/jrNuMFc5TPWr6huhDtId"
+          src="https://media.graphcms.com/S6jpiESo2BQFSrqXJBbw"
           alt=""
         />
         <h1 className="singlePostTitle">
@@ -81,7 +81,7 @@ const SinglePost = () => {
       <div className="singlePostWrapper">
         <img
           className="singlePostImg"
-          src="https://media.graphcms.com/jrNuMFc5TPWr6huhDtId"
+          src="https://media.graphcms.com/lIImYwduSwS400sfPMjA"
           alt=""
         />
         <h1 className="singlePostTitle">
@@ -117,7 +117,7 @@ const SinglePost = () => {
       <div className="singlePostWrapper">
         <img
           className="singlePostImg"
-          src="https://media.graphcms.com/jrNuMFc5TPWr6huhDtId"
+          src="https://media.graphcms.com/nPhA3O2RSaKvhVzDu2da"
           alt=""
         />
         <h1 className="singlePostTitle">
