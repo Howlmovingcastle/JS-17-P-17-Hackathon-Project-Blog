@@ -7,9 +7,6 @@ const MainPosts = () => {
   return (
     <div className="posts">
       <OnePost />
-      <OnePost />
-      <OnePost />
-      <OnePost />
     </div>
   );
 };
