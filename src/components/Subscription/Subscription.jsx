@@ -28,7 +28,7 @@ const Subscription = ({ item }) => {
         <CardMedia
           component="img"
           alt={item.type}
-          height="330"
+          height="331"
           image={item.img}
         />
         <CardContent>
