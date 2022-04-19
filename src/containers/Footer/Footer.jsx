@@ -1,108 +1,106 @@
-import {
-  Button,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-} from "@mui/material";
-
 import React from "react";
+
 import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer-wraper">
-      <div>
-        <section className="footer-content">
-          <ul className="footer-title-wrapper">
-            <li className="footer-title">
-              <h3 className="footer-title-item">Справка</h3>
-            </li>
-            <li className="footer-item">
-              <a className="footer-link">Справочный центр</a>
-            </li>
-            <li className="footer-item">
-              <a className="footer-link">Справочный форум</a>
-            </li>
-            <li className="footer-item">
-              <a className="footer-link">Видеоуроки</a>
-            </li>
-          </ul>
-
-          <ul className="footer-title-wrapper">
-            <li className="footer-title">
-              <h3 className="footer-title-item">Сообщество</h3>
-            </li>
-            <li className="footer-item">
-              <a className="footer-link">Blogger Buzz</a>
-            </li>
-          </ul>
-
-          <ul className="footer-title-wrapper">
-            <li className="footer-title">
-              <h3 className="footer-title-item">Разработчикам</h3>
-            </li>
-            <li className="footer-item">
-              <a className="footer-link">API Blogger</a>
-            </li>
-            <li className="footer-item">
-              <a className="footer-link">Форум разработчов</a>
-            </li>
-            <li style={{ marginTop: "15px" }} className="footer-item">
-              <img
-                style={{ width: "30px", height: "30px" }}
-                src="https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/telegram.png"
-                alt="tg-icon"
-              />
-              <a href="https://t.me/laylacommerce_bot" className="footer-link">
-                Связаться с админом
-              </a>
-            </li>
-          </ul>
-        </section>
-        <div className="div-1">
-          <div className="div-b"></div>
+    <footer class="footer">
+      <div class="container-footer">
+        <div className="logo__foter">
+          <img
+            src="https://logos.textgiraffe.com/logos/logo-name/Layla-designstyle-pastel-m.png"
+            alt="logo"
+          />
         </div>
-        <section>
-          <ul className="meta">
-            <li className="footer-link-from-bellow-content">
-              <a className="footer-link-from-bellow">Условия использования</a>
-            </li>
-
-            <li>
-              <a className="footer-link-from-bellow">Конфиденциальность</a>
-            </li>
-
-            <li>
-              <a className="footer-link-from-bellow">
-                Политика в отношении содержания
-              </a>
-            </li>
-          </ul>
-
-          <div className="select-wrapper">
-            <FormControl id="select-language" fullWidth>
-              <InputLabel id="demo-simple-select-label">Language</InputLabel>
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                label="Language"
-              >
-                <MenuItem id="language-inner" value={10}>
-                  Русский
-                </MenuItem>
-                <MenuItem id="language-inner" value={20}>
-                  English
-                </MenuItem>
-                <MenuItem id="language-inner" value={30}>
-                  Spanish (Spain) - Español
-                </MenuItem>
-              </Select>
-            </FormControl>
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li>
+                <a href="#">blog of your memories</a>
+              </li>
+              <li>
+                <a href="#">publish and share</a>
+              </li>
+              <li>
+                <a href="#">privacy policy</a>
+              </li>
+              <li>
+                <a href="#">affiliate program</a>
+              </li>
+            </ul>
           </div>
-        </section>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+              <li>
+                <a href="#">posting</a>
+              </li>
+              <li>
+                <a href="#">packages</a>
+              </li>
+              <li>
+                <a href="#">package status</a>
+              </li>
+              <li>
+                <a href="#">payment options</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Features</h4>
+            <ul>
+              <li>
+                <a href="#">membership</a>
+              </li>
+              <li>
+                <a href="#">free data</a>
+              </li>
+              <li>
+                <a href="#">friendly society</a>
+              </li>
+              <li>
+                <a href="#">sharing a memory</a>
+              </li>
+              <li>
+                <a href="#">popularity</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div style={{ fontSize: "20px" }} class="social-links">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <div className="footer-telegram-icon">
+                <br></br>
+                <p>Have a chat with our manager!</p>
+                <a href="https://t.me/laylacommerce_bot">
+                  <img
+                    style={{ width: "30px", height: "30px" }}
+                    src="https://uxwing.com/wp-content/themes/uxwing/download/10-brands-and-social-media/telegram.png"
+                    alt="telegramIcon"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
