@@ -1,7 +1,7 @@
+import { Button } from "@mui/material";
+import { List } from "antd";
 import React, { useContext, useEffect } from "react";
 import { favoriteContext } from "../../contexts/favoriteContext";
-
-import { List, Button } from "antd";
 
 import "./Favorites.css";
 
@@ -33,7 +33,7 @@ const Favorites = () => {
                     }}
                   >
                     <img
-                      src={item.item.image1}
+                      src={item.item.img}
                       style={{ width: "272px" }}
                       alt=""
                     />
@@ -42,8 +42,8 @@ const Favorites = () => {
                 description={
                   <>
                     <div>
-                      <h3>{item.item.brand}</h3>
-                      <h4>{item.item.model}</h4>
+                      <h3>{item.item.category}</h3>
+                      <h4>{item.item.title}</h4>
                     </div>
                     <div
                       style={{
@@ -52,7 +52,7 @@ const Favorites = () => {
                         marginTop: "35px",
                       }}
                     >
-                      {item.item.description}
+                      {item.item.descr}
                     </div>
                     <div
                       style={{

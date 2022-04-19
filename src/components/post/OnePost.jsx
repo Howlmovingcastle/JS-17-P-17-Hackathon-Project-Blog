@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { MoreOutlined } from "@mui/icons-material";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ThumbUpOutlinedIcon from "@mui/icons-material/ThumbUpOutlined";
 
 import "./post.css";
+import { favoriteContext } from "../../contexts/favoriteContext";
 
 const OnePost = ({ item }) => {
+  const { addProductToFavorites, checkItemInFavorites } =
+    useContext(favoriteContext);
+  const [checkItem1, setCheckItem1] = useState(checkItemInFavorites(item.id));
+
   return (
     <div className="post">
       <img className="postImg" src={item.img} alt="post img" />
@@ -40,10 +45,11 @@ const OnePost = ({ item }) => {
 
         <FavoriteBorderOutlinedIcon
           fontSize="large"
-          // onClick={() => {
-          //   addProductToFavorites(item);
-          //   setCheckItem1(checkItemInFavorites(item.id));
-          // }}
+          style={{ color: checkItem1 ? "blue" : "black" }}
+          onClick={() => {
+            addProductToFavorites(item);
+            setCheckItem1(checkItemInFavorites(item.id));
+          }}
         />
 
         <MoreOutlined fontSize="large" />

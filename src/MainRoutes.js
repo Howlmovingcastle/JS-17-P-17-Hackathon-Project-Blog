@@ -43,6 +43,10 @@ const MainRoutes = () => {
       element: <Favorites />,
       id: 7,
     },
+    {
+      link: "/chatroom",
+      id: 8,
+    },
   ];
 
   const ADMIN_ROUTES = [
