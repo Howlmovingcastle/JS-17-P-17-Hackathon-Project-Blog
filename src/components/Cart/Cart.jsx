@@ -1,7 +1,8 @@
 import React, { useContext, useEffect } from "react";
-import { List, Button } from "antd";
+import { List } from "antd";
 import { Link } from "react-router-dom";
 import { cartContext } from "../../contexts/cartContext";
+import { Button } from "@mui/material";
 
 const Cart = () => {
   const { getCart, cart, deleteFromCart } = useContext(cartContext);
@@ -11,7 +12,7 @@ const Cart = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container" style={{ margin: "20px" }}>
       <List
         itemLayout="vertical"
         dataSource={cart.products}
@@ -28,22 +29,20 @@ const Cart = () => {
                   }}
                 >
                   <img
-                    src={item.item.image}
+                    src={item.item.img}
                     alt="image1"
-                    style={{ width: "320px" }}
+                    style={{ width: "180px" }}
                   />
                 </div>
               }
               description={
                 <>
-                  <div style={{ marginTop: "25px" }}>
-                    <h3>{item.item.type}</h3>
+                  <div style={{ marginTop: "10px" }}>
+                    <h2>{item.item.type}</h2>
                     <h3>{"$" + item.item.price}</h3>
                   </div>
 
-                  <div style={{ marginTop: "35px", width: "40vw" }}>
-                    {item.item.description}
-                  </div>
+                  <div style={{ width: "40vw" }}>{item.item.description}</div>
                   <div
                     style={{
                       display: "flex",
@@ -53,9 +52,14 @@ const Cart = () => {
                       marginTop: "20px",
                     }}
                   ></div>
+                  {/* <Button onClick={() => deleteFromCart(item.item.id)}>
+                    Remove from cart
+                  </Button> */}
                   <Button onClick={() => deleteFromCart(item.item.id)}>
+                    {" "}
                     Remove from cart
                   </Button>
+
                   <Link to="/payment">
                     <Button
                       style={{

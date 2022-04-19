@@ -15,7 +15,7 @@ const Favorites = () => {
 
   return (
     <div className="animated-background">
-      <div className="container">
+      <div className="container-fav">
         <List
           itemLayout="vertical"
           dataSource={favorite.products}

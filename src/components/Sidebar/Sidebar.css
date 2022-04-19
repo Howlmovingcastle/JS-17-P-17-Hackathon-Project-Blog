@@ -80,8 +80,20 @@
   transition: 0.4s ease-in-out;
 }
 
-@media screen and (max-width: 572px) {
+/* @media screen and (max-width: 572px) {
   .sidebar {
     display: none;
+  }
+} */
+
+@media screen and (max-width: 1210px) {
+  .sidebarItem > img {
+    width: 65vw;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .sidebarItem > img {
+    width: 250px;
   }
 }

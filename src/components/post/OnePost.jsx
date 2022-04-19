@@ -29,7 +29,7 @@ const OnePost = ({ item }) => {
           </Link>
         </span>
         <hr />
-        <span className="postDate">1 hour ago</span>
+        <span className="postDate">15.04.2022 posted</span>
       </div>
       <p className="postDesc">{item.descr}</p>
       <div

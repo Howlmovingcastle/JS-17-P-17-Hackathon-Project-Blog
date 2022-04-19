@@ -10,6 +10,7 @@ import PaymentForm from "./components/PaymentForm/PaymentForm";
 import Single from "./pages/singlePage/Single";
 import Favorites from "./components/Favorites/Favorites";
 import Cart from "./components/Cart/Cart";
+import Chat from "./components/Chat/Chat/Chat";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -45,6 +46,7 @@ const MainRoutes = () => {
     },
     {
       link: "/chatroom",
+      element: <Chat />,
       id: 8,
     },
   ];
