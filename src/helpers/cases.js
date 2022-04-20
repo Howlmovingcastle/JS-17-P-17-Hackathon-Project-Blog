@@ -1,0 +1,2 @@
+export const CASE_GET_POSTS = 'CASE_GET_POSTS';
+export const CASE_GET_ONE_POSTS = 'CASE_GET_ONE_POSTS'

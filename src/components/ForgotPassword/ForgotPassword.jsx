@@ -1,28 +1,27 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../Sign In/img/icon.svg";
 import { useAuthContext } from "../../contexts/authContext";
-
-const Activate = () => {
-  const { activateAcc } = useAuthContext();
+import { Alert } from "@mui/material";
+const ForgotPassword = () => {
   const [email, setEmail] = useState("");
-  const [activate, setActivate] = useState("");
+  const { forgotPassword } = useAuthContext();
   const navigate = useNavigate();
 
-  function handelActivate() {
-    activateAcc(email, activate, navigate);
+  function handleForgotPassword() {
+    forgotPassword(email, navigate);
   }
+
   return (
-    <div>
+    <div className="mine">
       <div className="signin-wrapper">
         <div className="rightbar-wrapper">
           <div className="rightbar-content">
-            <img src={logo} alt="logo" style={{ width: "130px" }} />
-            <h1>Welcome!</h1>
+            <img src={logo} alt="logo" id="logo-signup" />
+            <h1>Welcome back!</h1>
             <h4>
-              In Blogger, you can write about anything, such as the weather, the
-              latest news or interesting ideas. Register – and you will find out
-              why a huge number of users have chosen this service.
+              Don't let the memories fade. You can store thousands of posts,
+              photos and more in Blogger for free.
             </h4>
           </div>
         </div>
@@ -37,32 +36,30 @@ const Activate = () => {
             textAlign: "center",
           }}
         >
-          <h1 className="signin-up">Activate account</h1>
+          <h1 className="signin-up">Change password</h1>
+          <p style={{ color: "#06A67E" }}>
+            Please enter your email address. We will send you an email to reset
+            your password
+          </p>
           <input
             id="outlined-basic"
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
           />
-          <input
-            id="outlined-basic"
-            placeholder="Code"
-            onChange={(e) => setActivate(e.target.value)}
-            value={activate}
-          />
           <div
             style={{
               display: "flex",
-              alignItems: "center",
+              alignItems: "baseline",
               justifyContent: "center",
             }}
           >
             <button
               variant="contained"
               className="signin-btn"
-              onClick={() => handelActivate()}
+              onClick={() => handleForgotPassword()}
             >
-              Activate
+              Change
             </button>
           </div>
         </div>
@@ -71,4 +68,4 @@ const Activate = () => {
   );
 };
 
-export default Activate;
+export default ForgotPassword;

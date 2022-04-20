@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
+import { Alert } from "@mui/material";
 
 export const authContext = React.createContext();
 export const useAuthContext = () => useContext(authContext);
@@ -44,12 +45,39 @@ const AuthContextProvider = ({ children }) => {
       setError("Error!");
     }
   }
-  async function activateAcc(email, activation_code) {
+  async function activateAcc(email, activation_code, navigate) {
     let formData = new FormData();
     formData.append("email", email);
     formData.append("activation_code", activation_code);
     try {
       let res = await axios.post(`${API}account/activate/`, formData);
+      navigate("/signin");
+      console.log(res);
+    } catch {
+      setError("Error!");
+    }
+  }
+
+  async function forgotPassword(email, navigate) {
+    let formData = new FormData();
+    formData.append("email", email);
+    try {
+      let res = await axios.post(`${API}account/forgot_password/`, formData);
+      navigate("/newpassword");
+
+      console.log(res);
+    } catch {
+      setError("Error!");
+    }
+  }
+
+  async function loginNewPass(email, newPassword, navigate) {
+    let formData = new FormData();
+    formData.append("detail", newPassword);
+    formData.append("email", email);
+    try {
+      let res = await axios.post(`${API}account/change_password/`, formData);
+      navigate("/");
       console.log(res);
     } catch {
       setError("Error!");
@@ -95,6 +123,8 @@ const AuthContextProvider = ({ children }) => {
         logout,
         loading,
         activateAcc,
+        forgotPassword,
+        loginNewPass,
       }}
     >
       {children}

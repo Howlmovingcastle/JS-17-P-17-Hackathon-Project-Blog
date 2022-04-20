@@ -1,20 +1,19 @@
 import { Button } from "antd";
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import "./SignIn.css";
-import logo from "./img/icon.svg";
+import logo from "../Sign In/img/icon.svg";
 import { useAuthContext } from "../../contexts/authContext";
-const SignIn = () => {
+
+const LoginNewPass = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const { signIn } = useAuthContext();
+  const [newPassword, setNewPassword] = useState("");
+  const { loginNewPass } = useAuthContext();
   // console.log(email, password)
 
-  function handleLogin(email, password) {
-    signIn(email, password, navigate);
+  function handleLoginNewPass(newPassword, email) {
+    loginNewPass(newPassword, email, navigate);
   }
 
   return (
@@ -41,7 +40,10 @@ const SignIn = () => {
             textAlign: "center",
           }}
         >
-          <h1 className="signin-up">Sign In</h1>
+          <h1 className="signin-up">
+            Sign in <br />
+            with new password
+          </h1>
           <input
             id="outlined-basic"
             placeholder="Email"
@@ -50,9 +52,9 @@ const SignIn = () => {
           />
           <input
             id="outlined-basic"
-            placeholder="Password"
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
+            placeholder="New password"
+            onChange={(e) => setNewPassword(e.target.value)}
+            value={newPassword}
           />
           <div
             style={{
@@ -64,17 +66,11 @@ const SignIn = () => {
             <button
               variant="contained"
               className="signin-btn"
-              onClick={() => handleLogin(email, password)}
+              onClick={() => handleLoginNewPass()}
             >
               Log in
             </button>
-            <Link to="/forgotPassword">
-              <p style={{ color: "#06A67E", cursor: "context-menu" }}>
-                Forgot password?
-              </p>
-            </Link>
           </div>
-          {/* эти стили в signup.css */}
           {location.pathname == "/signin" ? (
             <div className="go-to-login-content">
               <p>Don't have an account?</p>
@@ -93,4 +89,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default LoginNewPass;

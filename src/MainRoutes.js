@@ -10,6 +10,13 @@ import SignIn from "./components/Sign In/SignIn";
 import SignUp from "./components/SignUp/SignUp";
 import Activate from "./components/Activate/Activate";
 
+import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
+import LoginNewPass from "./components/LoginNewPass/LoginNewPass";
+import AddPost from "./components/AddPost/AddPost";
+import PostsList from "./components/PostsList/PostsList";
+import Edit from "./components/Edit/Edit";
+import Details from "./components/Details/Details";
+
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
     {
@@ -28,9 +35,33 @@ const MainRoutes = () => {
       id: 2,
     },
     {
-      link: '/activate' ,
-      element: <Activate/>
-    }
+      link: "/activate",
+      element: <Activate />,
+    },
+    {
+      link: "/forgot_assword",
+      element: <ForgotPassword />,
+    },
+    {
+      link: "/new_password",
+      element: <LoginNewPass />,
+    },
+    {
+      link: "/add",
+      element: <AddPost />,
+    },
+    {
+      link: "/list",
+      element: <PostsList />,
+    },
+    {
+      link: "/edit/:id",
+      element: <Edit />,
+    },
+    {
+      link: "/details/:id",
+      element: <Details />,
+    },
   ];
 
   const ADMIN_ROUTES = [

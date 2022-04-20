@@ -38,14 +38,15 @@
     padding-bottom: 40px;
 }
 .signin-btn{
-    width: 25%;
+    width: 85px;
     height: 40px;
     border-radius: 20px;
     color: white;
     background-color: #06A67E;
-    margin: 19px auto;
+    margin: 20px;
     border: none;
     font-weight: 600;
+     
 }
 .signin-btn:hover{
     background-color: #06a67ecc;

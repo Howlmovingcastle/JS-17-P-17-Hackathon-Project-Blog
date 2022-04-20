@@ -75,15 +75,23 @@ const SignUp = () => {
             onChange={(e) => setLastName(e.target.value)}
             value={lastName}
           />
-          <button
-            variant="contained"
-            className="signin-btn"
-            onClick={() =>
-              handleRegister(email, password, confirmPassword, name, lastName)
-            }
+          <div
+            style={{
+              display: "flex",
+              alignItems: "baseline",
+              justifyContent: "center",
+            }}
           >
-            Sign Up
-          </button>
+            <button
+              variant="contained"
+              className="signin-btn"
+              onClick={() =>
+                handleRegister(email, password, confirmPassword, name, lastName)
+              }
+            >
+              Sign Up
+            </button>
+          </div>
           {location.pathname == "/signup" ? (
             <div className="go-to-login-content">
               <p>Have you already been registered?</p>
