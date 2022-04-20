@@ -5,7 +5,9 @@ import Auth from "./components/Auth/Auth";
 import AdminPage from "./pages/AdminPage";
 import Error404 from "./pages/Error404";
 import Navbar from "./components/Navbar/Navbar";
-import Footer from "./containers/Footer/Footer";
+import Header from "./containers/Header/Header";
+import Contact from "./components/Contact/Contact";
+import ToolBar from "./components/SideBar/ToolBar";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -18,6 +20,16 @@ const MainRoutes = () => {
       link: "/authpage",
       element: <Auth />,
       id: 2,
+    },
+    {
+      link: "/",
+      element: <Header />,
+      id: 3,
+    },
+    {
+      link: "/contact",
+      element: <Contact />,
+      id: 4,
     },
   ];
 
@@ -42,7 +54,8 @@ const MainRoutes = () => {
         ))}
         <Route path="*" element={<Error404 />} />
       </Routes>
-      <Footer />
+
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 };
